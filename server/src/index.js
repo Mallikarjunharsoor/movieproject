@@ -14,8 +14,9 @@ const app = express();
 const port = Number(process.env.PORT || 5000);
 
 app.use(cors({
-    origin: "http://localhost:5173", // Explicitly allow your Vite dev server
-    credentials: true
+    origin: 'https://movieproject-utqa.vercel.app', // Your specific Vercel URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
 
 app.use(express.json());
